@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/ee0a0de948.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js" type="module"></script>
+    <title>Ecommerce med filter etc</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="search-container">
+        <input type="text" placeholder="Search" class="search" />
+        <div class="holder">
+          <div class="dot-container">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="bars-container">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+        <div class="sort-container">
+          <label for="sort">Sort By Price</label>
+          <select name="sort" id="sort">
+            <option value="lowest">Lowest</option>
+            <option value="highest">Highest</option>
+          </select>
+        </div>
+        <div class="cart-container">
+          <span class="num-items">0</span>
+          <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+    </div>
+    <div class="modal hidden">
+      <h4>Cart</h4>
+      <p class="total-price">total</p>
+    </div>
+    <div class="main">
+      <div class="main-filter-container">
+        <div class="filter-container">
+          <h4>Category</h4>
+        </div>
+        <div class="main-colors-container">
+          <h4>Colors</h4>
+          <div class="colors-container"></div>
+        </div>
+        <div class="price-range">
+          <h4>Price</h4>
+          <div class="price">
+            <p class="amount">500kr - 30.000kr</p>
+            <input
+              type="range"
+              class="range"
+              name="range"
+              min="500"
+              max="50000"
+              step="500"
+            />
+          </div>
+        </div>
+        <div class="shipping-container">
+          <label for="shipping">Free Shipping</label>
+          <input type="checkbox" class="shipping" />
+        </div>
+        <button class="clear">Clear Filter</button>
+      </div>
+      <div class="products-container"></div>
+    </div>
+    <div class="test"></div>
+  </body>
+</html>
